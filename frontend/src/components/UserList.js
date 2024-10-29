@@ -14,10 +14,19 @@ const UserList = () => {
     setUser(response.data);
   };
 
+  const deleteUser = async (id) => {
+    try {
+      await axios.delete(`http://localhost:5000/users/${id}`);
+      getUsers();
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <div className="columns">
       <div className="column is-half">
-        <Link to={add} className="button is-success">
+        <Link to={`/add`} className="button is-success">
           Add New
         </Link>
         <table className="table is-striped is-fullwidth mt-5">
@@ -38,10 +47,12 @@ const UserList = () => {
                 <td>{user.email}</td>
                 <td>{user.gender}</td>
                 <td>
-                  <Link to={`edit/${user._id}`} className="button is-info is-small">
+                  <Link to={`/edit/${user._id}`} className="button is-info is-small">
                     Edit
                   </Link>
-                  <button className="button is-danger is-small">Delete</button>
+                  <button onClick={() => deleteUser(user._id)} className="button is-danger is-small">
+                    Delete
+                  </button>
                 </td>
               </tr>
             ))}

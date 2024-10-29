@@ -35,8 +35,8 @@ const EditUser = () => {
   };
 
   return (
-    <div className="columns">
-      <div className="column is-half">
+    <div className="columns mt-6">
+      <div className="column is-fullwidth">
         <form onSubmit={updateUser}>
           <div className="field">
             <label className="label">Name</label>
@@ -63,7 +63,7 @@ const EditUser = () => {
           </div>
           <div className="field">
             <div className="control">
-              <button type="submit" className="button is-success">
+              <button type="submit" className="button is-success is-fullwidth">
                 Update
               </button>
             </div>

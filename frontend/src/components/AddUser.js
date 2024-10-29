@@ -23,8 +23,8 @@ const AddUser = () => {
   };
 
   return (
-    <div className="columns">
-      <div className="column is-half">
+    <div className="columns mt-6">
+      <div className="column is-full">
         <form onSubmit={saveUser}>
           <div className="field">
             <label className="label">Name</label>
@@ -51,7 +51,7 @@ const AddUser = () => {
           </div>
           <div className="field">
             <div className="control">
-              <button type="submit" className="button is-success">
+              <button type="submit" className="button is-success is-fullwidth">
                 Save
               </button>
             </div>

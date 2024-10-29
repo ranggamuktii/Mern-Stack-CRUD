@@ -6,7 +6,7 @@ import EditUser from './components/EditUser';
 function App() {
   return (
     <BrowserRouter>
-      <div className="container">
+      <div className="container is-flex is-flex-direction-column " style={{ minHeight: '100vh' }}>
         <Routes>
           <Route path="/" element={<UserList />} />
           <Route path="/add" element={<AddUser />} />

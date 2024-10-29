@@ -1,1 +1,14 @@
 GET http://localhost:5000/users
+
+###
+GET http://localhost:5000/users/6720682c92f5b3478703735c
+
+###
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "Adinda Diana",
+    "email": "adindadiana@gmail.com",
+    "gender": "Female"
+}
